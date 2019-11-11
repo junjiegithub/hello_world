@@ -34,7 +34,7 @@ else:
     2.在循环体中设置break
 
 2.
-while 条件:
+while 条件:a
     条件成立执行的语句部分
     循环体
 else：
