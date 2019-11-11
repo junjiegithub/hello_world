@@ -1,22 +1,46 @@
-
-count =0
-while True:
-    if count ==5:
-        break
-    print('hello world!')
-    count+=1
-else:
-    print("----over-----!")
-
-
-# i=0   #计数器
+#
+# count =0
+# while count<5:
+#     # if count ==3:
+#     #     break
+#     print('hello world!')
+#     count+=1
+# else:
+#     print("----over-----!")
+# #打印1-50之间的数字
+# i=0
+# while i<51:
+#     print("数字:",i)
+#     i+=1
+#     pass
+# else:
+#     print("数字打印完毕！")
+#
+#
+# # i=0   #计数器
 # while i<5:
 #     print("hello,world!")
 #
 #     i+=1
 #
 # print("---over---!")
+
+# #打印1-100的偶数(扩展:每5个数字一行)
+#
+# i=1
+# while i<1010:
+#     if i%2 ==0:
+#         print('数字',i)
+#     i+=1
+# else:
+#     print('数字打印完毕！')
+#
+
+
+#打印1-100之间奇数的累加和
+
 '''
+
 循环：
 场景：
     1.银行：
@@ -43,7 +67,7 @@ else：
 验证用户名和密码是否正确，如果正确则输出登录成功，否则用户名或者密码有误
 '''
 #验证用户名和密码三次
-#申明变量
+# #申明变量
 # count =1
 # while count <4:
 #     username = input("请输入用户名:")
@@ -60,10 +84,11 @@ else：
 #         #     print('账户锁定！')
 #     #改变计算器
 #         count += 1
+# else:
+#     print('账户锁定！')
+# # #方式二：
+# # if count ==4:
+# #     print("账户锁定！")
 #
-# #方式二：
-# if count ==4:
-#     print("账户锁定！")
 #
-#
-#
+# #
