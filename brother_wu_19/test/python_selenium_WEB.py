@@ -18,4 +18,22 @@ web自动化-环境安装
 4.框架--调用款阿静
 
 
+chromedriver
+
+
+
 '''
+from selenium import webdriver
+
+driver=webdriver.Chrome()
+
+#访问百度首页
+driver.get("http://www.baidu.com")
+
+#找到百度首页-输入框
+ele =driver.find_element_by_id("kw")
+
+#输入内容 chromedriver
+ele.send_keys("chromedriver")
+
+driver.find_element_by_id("su").click()
