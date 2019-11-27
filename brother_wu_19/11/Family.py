@@ -41,7 +41,7 @@ class Son(Family):
         super(Family,self).__init__()
         #定义动态属性
         self.name=name
-        self.age=age
+        self.age =age
         self.__secret ='我喜欢隔壁的小花'
     def action(self):
         money =random.randint(0,100)
@@ -57,6 +57,25 @@ if __name__ == '__main__':
     #家庭的自我介绍
     print('这是一个姓'+family.surname+'的家庭，他们生活在'+family.address)
     print('我是父亲—'+family.surname+father.name+'，今年'+str(father.age)+'岁。')
+
     print('我是母亲—'+mother.name+ '，今年'+ str(mother.age) + '岁。')
     print('我是儿子—'+family.surname+son.name+'，今年'+ str(son.age)+'岁。')
+
+    #家庭费用开支
+    father_money=father.action()
+    family.income=father_money
+    print('父亲今天赚了'+str(father_money)+'元，家庭资产剩余'+str(family.income))
+
+    mother_money=mother.action()
+    family.income+=mother_money
+    print('母亲今天花了'+str(-mother_money)+'元，家庭资产剩余'+str(family.income))
+
+    son_money = son.action()
+    family.income += son_money
+    print('儿子今天花了' + str(-son_money) + '元，家庭资产剩余' + str(family.income))
+
+    #家庭成员小秘密
+    print('父亲告你一个小秘密：'+father._Father__secret)
+    print('母亲告你一个小秘密：'+mother._Mother__secret)
+    print('儿子告你一个小秘密：'+son._Son__secret)
 
