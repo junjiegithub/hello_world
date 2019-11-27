@@ -57,6 +57,6 @@ if __name__ == '__main__':
     #家庭的自我介绍
     print('这是一个姓'+family.surname+'的家庭，他们生活在'+family.address)
     print('我是父亲—'+family.surname+father.name+'，今年'+str(father.age)+'岁。')
-    print('我是母亲—')+mother.name+ '，今年'+ str(mother.age) + '岁。'
-    print('我是儿子—')+family.surname+son.name+',今年'+str(son.age)+'岁。'
+    print('我是母亲—'+mother.name+ '，今年'+ str(mother.age) + '岁。')
+    print('我是儿子—'+family.surname+son.name+'，今年'+ str(son.age)+'岁。')
 
