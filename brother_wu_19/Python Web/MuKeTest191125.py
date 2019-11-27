@@ -13,14 +13,45 @@ Login_01 ???  ???? ??????  1.??????????????????http://www.5itest.cn/register?   
 id??????register-btn  ???????  2.?????id?register_email????????????1416279053@qq.com   2.??????????
 '''
 
-
+import time
+import random
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome()
-driver.get("http://www.5itest.cn/register")
-print(EC.title_contains("注册"))
+# driver = webdriver.Chrome()
+#driver.get("http://www.5itest.cn/register")
+# time.sleep(5)
+#print(EC.title_contains("注册"))
+user_email=random.sample('1234567890abcdefg',5)
+for i in range(5):
+    user_email =''.join( random.sample('1234567890abcdefg', 5))+"@qq.com"
+    print(user_email)
 
-driver.find_element_by_id("register_email").send_keys("1416279053@qq.com")
-user_name_element_node = driver.find_element_by_class_name()
 
+
+
+
+#element= driver.find_elements_by_class_name("controls")
+#EC.visibility_of_element_located(element)#判断这个元素可以不可以见,
+# locator = (By.CLASS_NAME,"controls")
+# WebDriverWait(driver,1).until(EC.visibility_of_element_located(locator))
+# email_element=driver.find_element_by_id("register_email")
+# print(email_element.get_attribute("placeholder"))
+# email_element.send_keys("test@qq.com")
+# print(email_element.get_attribute("value"))
+
+# driver.close()
+
+
+
+
+
+# driver.find_element_by_id("register_email").send_keys("1416279053@qq.com")
+# user_name_element_node = driver.find_elements_by_class_name("controls")[1]
+# user_element=user_name_element_node.find_element_by_class_name("form-control")
+# user_element.send_keys("PythonWorld")
+# driver.find_element_by_name("password").send_keys("123456")
+# driver.find_element_by_xpath('//*[@id="captcha_code"]').send_keys("111111")
+#
