@@ -33,7 +33,7 @@ print(EC.title_contains("登录"))        #打印元素地址，判断网页是�
 #
 driver.save_screenshot("D:/chrom/a.png")                #截取整个网页并保存到D盘
 code_element=driver.find_element_by_id("imgCode")       #定义变量获取验证码的定位元素
-print(code_element.location)#{'x': 795, 'y': 359}       #打印验证码在网页上的坐标
+#print(code_element.location)#{'x': 795, 'y': 359}       #打印验证码在网页上的坐标
 left =code_element.location['x']                        #定义验证码左边的定位数值
 top=code_element.location['y']                          #定义验证码上边的坐标
 right=code_element.size['width']+left                   #定义验证码图片的宽度和坐标
@@ -47,11 +47,11 @@ print(text)
                                       #关闭浏览器
 
 driver.find_element_by_name("users.login_name").send_keys("测试账号")
-time.sleep(3)
+time.sleep(1)
 driver.find_element_by_name("users.password").send_keys("123456")
-time.sleep(2)
+time.sleep(1)
 driver.find_element_by_name("verificationCode").send_keys(text)
-time.sleep(5)
+time.sleep(1)
 driver.find_element_by_xpath('//*[@id="LoginForm"]/div[7]/input').click()
 time.sleep(5)
 driver.close()
