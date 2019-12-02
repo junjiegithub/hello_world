@@ -60,15 +60,27 @@ def run_main():
     get_element("verificationCode").send_keys(text)
 
     driver.find_element_by_xpath('//*[@id="LoginForm"]/div[7]/input').click()
+
     # while True:
     #     if EC.title_contains("测试账号")==0:
     #         print("登录成功")
     #         break
-    while EC.title_contains("测试账号")==0:
-            print("登录成功")
-            break
+    # while EC.title_contains("测试账号")==0:
+    #
+    #         print("登录成功")
+    #         break
+    link = driver.find_elements_by_link_text("测试账号")
+    print(link)
+    return link
+i ="修改密码"
 
-
+for i in run_main():
+    if i == "修改密码":
+        print("登录成功！")
+        break
+    else:
+        print("登录失败，请重新登录！")
+        driver.quit()
     # driver.close()
     #print(EC.title_contains("登录"))
 #run_main()
@@ -80,4 +92,4 @@ def run_main():
 #     else:
 #         run_main()
 
-run_main()
+# run_main()
