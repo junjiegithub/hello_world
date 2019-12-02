@@ -69,7 +69,7 @@ def run_main():
     #
     #         print("登录成功")
     #         break
-    link = driver.find_elements_by_link_text("测试账号")
+    link = EC.title_contains("测试账号")
     print(link)
     return link
 i ="修改密码"
