@@ -70,17 +70,23 @@ def run_main():
     #         print("登录成功")
     #         break
     link = EC.title_contains("测试账号")
+    while link:
+        if link == 0:
+            print("登录成功！")
+        else:
+                print("登录失败，请重新登录！")
+                driver.quit()
     print(link)
     return link
-i ="修改密码"
 
-for i in run_main():
-    if i == "修改密码":
-        print("登录成功！")
-        break
-    else:
-        print("登录失败，请重新登录！")
-        driver.quit()
+
+# for i in run_main():
+#     if i == "修改密码":
+#         print("登录成功！")
+#         break
+#     else:
+#         print("登录失败，请重新登录！")
+#         driver.quit()
     # driver.close()
     #print(EC.title_contains("登录"))
 #run_main()
@@ -92,4 +98,4 @@ for i in run_main():
 #     else:
 #         run_main()
 
-# run_main()
+run_main()
