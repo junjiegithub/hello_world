@@ -5,7 +5,7 @@ from PIL import Image
 from selenium import webdriver
 import pytesseract
 from selenium.webdriver.support import expected_conditions as EC
-
+#pip install Configparser
 driver = webdriver.Chrome()  # 定义变量存webdriver
 
 #初始化浏览器
@@ -60,42 +60,7 @@ def run_main():
     get_element("verificationCode").send_keys(text)
 
     driver.find_element_by_xpath('//*[@id="LoginForm"]/div[7]/input').click()
+    driver.quit()
 
-    # while True:
-    #     if EC.title_contains("测试账号")==0:
-    #         print("登录成功")
-    #         break
-    # while EC.title_contains("测试账号")==0:
-    #
-    #         print("登录成功")
-    #         break
-    link = EC.title_contains("测试账号")
-    while link:
-        if link == 0:
-            print("登录成功！")
-        else:
-                print("登录失败，请重新登录！")
-                driver.quit()
-    print(link)
-    return link
-
-
-# for i in run_main():
-#     if i == "修改密码":
-#         print("登录成功！")
-#         break
-#     else:
-#         print("登录失败，请重新登录！")
-#         driver.quit()
-    # driver.close()
-    #print(EC.title_contains("登录"))
-#run_main()
-#
-# while run_main():
-#     if driver.find_element_by_xpath('//*[@id="user_menu"]/li[2]/a')=="测试账号":
-#         print("登录成功")
-#         break
-#     else:
-#         run_main()
 
 run_main()
