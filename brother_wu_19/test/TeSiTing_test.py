@@ -95,3 +95,4 @@ ac=ActionChains(driver)
 
 ac.move_to_element(driver.find_element_by_xpath('//*[@id="hd-my-cart"]/a/div')).perform()
 driver.find_element_by_xpath('//*[@id="show_minicart"]/div/div/div[3]/a').click()
+
