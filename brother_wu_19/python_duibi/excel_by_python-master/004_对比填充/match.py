@@ -3,7 +3,7 @@
 # import os0
 
 
-# # 读取表0
+# # 读取表
 # df_my_books = pd.DataFrame(pd.read_excel('excels/作品信息表.xlsx', sheet_name='Sheet1'))
 
 # df_my_author = pd.DataFrame(pd.read_excel('excels/作者表.xlsx', sheet_name='Sheet1'))
