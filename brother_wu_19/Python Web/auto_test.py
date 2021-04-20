@@ -48,7 +48,6 @@ def xshoppy_orders_list():
 
 
 
-
 if __name__ == '__main__':
     xshoppy_orders_list()
     sql1="SELECT  email FROM `testoms`.`sales_order_master` WHERE `platform_order_number` = '210412100948215'"
