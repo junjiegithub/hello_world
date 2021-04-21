@@ -65,6 +65,7 @@ def os_sku_sql():
 
 def oms_sku_mount_sql():
     a=xshoppy_orders_list()[1]
+    print()
 
 def query_data_os():
     conn = get_os_conn()
